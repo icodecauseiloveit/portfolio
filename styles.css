@@ -75,9 +75,12 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
+    background: url('/assets/media/home_4757x2932.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
- .home-content {
+.home-content {
     max-width: 60rem;
 }
 
@@ -184,5 +187,42 @@ section {
     border: .2rem solid var(--main-color);
     border-radius: 50%;
     font-size: 20px;
-    color: var(--main-color)
+    color: var(--main-color);
+    overflow:hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover{
+    color: var(--bg-color);
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.home-imgHover:hover {
+    background: var(--bg-color);
+    opacity: .8;
 }
